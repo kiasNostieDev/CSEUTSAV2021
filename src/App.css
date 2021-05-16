@@ -1,38 +1,251 @@
-.App {
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: #40404b;
+}
+
+.yellowtop{
+  position: absolute;
+  width: 50%;
+  margin-top: 2%;
+  margin-left: 50%;
+}
+
+.expla{
+  width: 70%;
+  margin-left: 20%;
+  height: 200px;
+  position: absolute;
+}
+
+.bannermain{
+  width: 80%;
+  height: 45%;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  margin: 10%;
+  margin-top: 7%;
+}
+
+.openerbanner{
+  width: 90%;
+  height: 30%;
+  margin-top: 30%;
+  position: absolute;
+}
+
+.closerbanner{
+  width: 100%;
+  height: 30%;
+  margin-top: 60%;
+  position: absolute;
+}
+
+.noofcontest{
+  width: 90%;
+  height: 30vh;
+  padding: 5% 0;
+  margin-left: 6%;
+  position: absolute;
+  margin-top: 20%;
+}
+
+.svgHoldermain{
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin-left: 10%;
+}
+
+.svgTextside{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.svgtexthead{
   text-align: center;
+  font-family: 'Rubik';
+  font-size: 30pt;
+  margin-top: 40px;
+  font-weight: bolder;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.svgtextsub{
+  text-align: center;
+  font-family: 'Rubik';
+  font-size: 16pt;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.listofcontest{
+  width: 100%;
+  height: 70%;
+  background-color: #40404b;
+  margin-top: 55%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.posters{
+  width: 100vw;
+  height: 120vh;
+  background-color: #40404b;
+}
+
+.postertitle{
+  padding-top: 5%;
   color: white;
+  font-family: 'Rubik';
+  font-size: 20pt;
+  text-align: center;
+  font-family: 'Rubik';
+  font-size: 30pt;
+  font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.imagepos{
+  width: 70%;
+  height: 70%;
+  margin-top: 5%;
+  margin-left: 15%;
+
+
+  /* overflow: auto; */
+  overflow-x: visible;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imagepos img{
+  display: inline-block;
+  margin-left: 20px;
+  overflow:hidden;
+  height: 100%;
+}
+
+.consolepath{
+  position: absolute;
+  margin: 1%;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: #40404b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+.headhead{
+  margin-top: 20%;
+}
+
+.tableside{
+  width: 45%;
+  height: 350px;
+  background-color: black;
+  float: left;
+  margin-top: 5%;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 700px){
+  .openerbanner{
+    visibility: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .closerbanner{
+    visibility: hidden;
+  }
+
+  .svgHoldermain{
+    margin-left: 25%;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .bannermain{
+    height: 25%;
+  }
+
+  .svgTextside{
+    width: 100%;
+    float: unset;
+    color: white;
+  }
+
+  .yellowtop{
+    width: 55%;
+  }
+
+  .listofcontest .svgTextside{
+    visibility: hidden;
+    width: 0;
+  }
+
+  .headhead{
+    visibility: hidden;
+    margin-top: 7%;
+  }
+
+  .expla{
+    visibility: hidden;
+  }
+
+  .listofcontest{
+    margin-top: 0%;
+    width: inherit;
+    height: fit-content;
+  }
+
+  .tableside{
+    float: unset;
+    margin-top: 6%;
+    width: 90%;
+    margin-left: 4%;
+  }
+
+  .posters{
+    height: 10vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #40404b;
+  }
+
+  .postertitle{
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+  }
+
+  .imagepos{
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+  }
+
+  .imagepos img{
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
   }
 }

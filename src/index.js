@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Regis from './Pages/Regis';
+import Console from './Pages/Console';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path='/' component={App} />
+        <Route path='/register/:slug' component={Regis} />
+        <Route path='/console' component={Console}/>
+      </Switch>
+    </div>
+  </Router>,
   document.getElementById('root')
 );
 
