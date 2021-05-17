@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Regis from './Pages/Regis';
 import Console from './Pages/Console';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Tabler from './Pages/Tabler';
 
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route exact path='/' component={App} />
         <Route path='/register/:slug' component={Regis} />
         <Route path='/console' component={Console}/>
+        <Route path='/table/:slug' component={Tabler}/>
       </Switch>
     </div>
   </Router>,

@@ -1,10 +1,11 @@
-import { FormControl, FormHelperText, InputLabel, makeStyles, OutlinedInput, Typography } from '@material-ui/core'
+import { Button, FormControl, FormHelperText, InputLabel, makeStyles, OutlinedInput, Typography } from '@material-ui/core'
 import React, {useEffect, useState} from 'react'
 import './Console.css'
 import firebase from 'firebase/app'
 import fbref from '../Firebase'
 import { IconButton } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -91,8 +92,9 @@ export default function Console() {
                         <IconButton onClick={()=>setSelec('0')} style={{ color: 'yellow', float: 'left'}} aria-label="upload picture" component="span">
                             <ArrowBack />
                         </IconButton>
-                        <Typography fullWidth style={{ fontFamily: 'Rubik', color: 'gray', textAlign: 'center', padding: '9px' }} variant='h5'>{currentContest}</Typography>
+                        <Typography fullWidth style={{ fontFamily: 'Rubik', color: 'gray', textAlign: 'center', padding: '9px' }} variant='h5'>{currentContest + "(" + listofs.length + ")"}</Typography>
                     </div>
+                    <Link to={'/table/'+currentContest}  style={{textDecoration: 'none'}}><Button fullWidth onClick={()=>{}}>Tablulate the List</Button></Link>
                     <div className='competerTab'>{
                         listofs.map(item => {
                             let first = item.name + " from  " + item.year + " and section "  + item.sec + " for team " + item.team
